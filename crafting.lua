@@ -12,12 +12,12 @@ minetest.register_craft({
 
 minetest.register_craft({
 	output = "default:stick",
-	recipe = {{"default:sapling"},}
+	recipe = {{"group:sapling"},}
 })
 
 minetest.register_craft({
-	output = "default:stick",
-	recipe = {{"default:junglesapling"},}
+	output = "default:wood",
+	recipe = {{"group:wood"},}
 })
 
 minetest.register_craft({
@@ -139,6 +139,44 @@ minetest.register_craft({
 		{"default:jungletree", "default:jungletree", "default:jungletree"},
 	}
 })
+minetest.register_craft({
+	output = "moreblocks:all_faces_pine_tree 8",
+	recipe = {
+		{"default:pine_tree", "default:pine_tree", "default:pine_tree"},
+		{"default:pine_tree", "", "default:pine_tree"},
+		{"default:pine_tree", "default:pine_tree", "default:pine_tree"},
+	}
+})
+
+minetest.register_craft({
+	output = "moreblocks:all_faces_acacia_tree 8",
+	recipe = {
+		{"default:acacia_tree", "default:acacia_tree", "default:acacia_tree"},
+		{"default:acacia_tree", "", "default:acacia_tree"},
+		{"default:acacia_tree", "default:acacia_tree", "default:acacia_tree"},
+	}
+})
+
+minetest.register_craft({
+	output = "moreblocks:all_faces_aspen_tree 8",
+	recipe = {
+		{"default:aspen_tree", "default:aspen_tree", "default:aspen_tree"},
+		{"default:aspen_tree", "", "default:aspen_tree"},
+		{"default:aspen_tree", "default:aspen_tree", "default:aspen_tree"},
+	}
+})
+
+minetest.register_craft({
+	output = "moreblocks:all_faces_mushroom_tree 8",
+	recipe = {
+		{"ethereal:mushroom_trunk", "ethereal:mushroom_trunk", "ethereal:mushroom_trunk"},
+		{"ethereal:mushroom_trunk", "", "ethereal:mushroom_trunk"},
+		{"ethereal:mushroom_trunk", "ethereal:mushroom_trunk", "ethereal:mushroom_trunk"},
+	}
+})
+
+
+
 
 minetest.register_craft({
 	output = "moreblocks:sweeper 4",
@@ -382,9 +420,33 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+        output = "moreblocks:trap_desert_stone",
+        type = "shapeless",
+        recipe = {"default:mese_crystal_fragment", "default:desert_stone"},
+})
+
+minetest.register_craft({
 	output = "moreblocks:trap_glass",
 	type = "shapeless",
 	recipe = {"default:mese_crystal_fragment", "default:glass"},
+})
+
+minetest.register_craft({
+        output = "moreblocks:trap_obsidian_glass",
+        type = "shapeless",
+        recipe = {"default:mese_crystal_fragment", "default:obsidian_glass"},
+})
+
+minetest.register_craft({
+        output = "moreblocks:trap_obsidian",
+        type = "shapeless",
+        recipe = {"default:mese_crystal_fragment", "default:obsidian"},
+})
+
+minetest.register_craft({
+        output = "moreblocks:trap_sandstone",
+        type = "shapeless",
+        recipe = {"default:mese_crystal_fragment", "default:sandstone"},
 })
 
 minetest.register_craft({
@@ -419,6 +481,20 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+        output = "moreblocks:dirt_compressed",
+        recipe = {
+                {'default:dirt', 'default:dirt', 'default:dirt'},
+                {'default:dirt', 'default:dirt', 'default:dirt'},
+                {'default:dirt', 'default:dirt', 'default:dirt'},
+        }
+})
+
+minetest.register_craft({
+        output = "default:dirt 9",
+        recipe = {{"moreblocks:dirt_compressed"}},
+})
+
+minetest.register_craft({
 	output = "moreblocks:cobble_compressed",
 	recipe = {
 		{"default:cobble", "default:cobble", "default:cobble"},
@@ -435,15 +511,33 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+        output = "moreblocks:cobble_condensed",
+        recipe = {
+                {"moreblocks:cobble_compressed", "moreblocks:cobble_compressed",
+          "moreblocks:cobble_compressed"},
+                {"moreblocks:cobble_compressed", "moreblocks:cobble_compressed",
+          "moreblocks:cobble_compressed"},
+                {"moreblocks:cobble_compressed", "moreblocks:cobble_compressed",
+          "moreblocks:cobble_compressed"},
+        }
+})
+
+minetest.register_craft({
+   type = "shapeless",
+        output = "moreblocks:cobble_compressed 9",
+        recipe = {"moreblocks:cobble_condensed"}
+})
+
+minetest.register_craft({
 	type = "cooking", output = "moreblocks:tar", recipe = "default:gravel",
 })
 
 minetest.register_craft({
 	type = "shapeless",
 	output = "moreblocks:copperpatina",
-	recipe = {"bucket:bucket_water", "default:copperblock"},
+	recipe = {"group:bucket_water", "default:copperblock"},
 	replacements = {
-		{"bucket:bucket_water", "bucket:bucket_empty"}
+		{"group:bucket_water", "bucket:bucket_empty"}
 	}
 })
 

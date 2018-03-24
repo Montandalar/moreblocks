@@ -7,6 +7,7 @@ Licensed under the zlib license. See LICENSE.md for more information.
 
 local S = moreblocks.intllib
 
+local sound_dirt = default.node_sound_dirt_defaults()
 local sound_wood = default.node_sound_wood_defaults()
 local sound_stone = default.node_sound_stone_defaults()
 local sound_glass = default.node_sound_glass_defaults()
@@ -127,11 +128,25 @@ local nodes = {
 		groups = {cracky = 2, tar_block = 1},
 		sounds = sound_stone,
 	},
+        ["dirt_compressed"] = {
+                description = S("Compressed Dirt"),
+                groups = {crumbly=2},
+                is_ground_content = false,
+                sounds = sound_dirt,
+        },
 	["cobble_compressed"] = {
 		description = S("Compressed Cobblestone"),
 		groups = {cracky = 1},
 		sounds = sound_stone,
 	},
+        ["cobble_condensed"] = {
+           description = "Condensed Cobblestone",
+           tiles = {"moreblocks_cobble_compressed.png^[colorize:black:255]"},
+           is_ground_content = false,
+           groups = {cracky = 1, stone = 2},
+           stack_max = 999,
+           sounds = default.node_sound_stone_defaults(),
+        },
 	["plankstone"] = {
 		description = S("Plankstone"),
 		groups = {cracky = 3},
@@ -141,8 +156,9 @@ local nodes = {
 	["iron_glass"] = {
 		description = S("Iron Glass"),
 		drawtype = "glasslike_framed_optional",
-		--tiles = {"moreblocks_iron_glass.png", "moreblocks_iron_glass_detail.png"},
-		tiles = {"moreblocks_iron_glass.png"},
+		tiles = {"moreblocks_iron_glass.png", "moreblocks_iron_glass_detail.png"},
+		--tiles = {"moreblocks_iron_glass.png"},
+                one_texture = true,
 		paramtype = "light",
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
@@ -151,8 +167,9 @@ local nodes = {
 	["coal_glass"] = {
 		description = S("Coal Glass"),
 		drawtype = "glasslike_framed_optional",
-		--tiles = {"moreblocks_coal_glass.png", "moreblocks_coal_glass_detail.png"},
-		tiles = {"moreblocks_coal_glass.png"},
+		tiles = {"moreblocks_coal_glass.png", "moreblocks_coal_glass_detail.png"},
+		--tiles = {"moreblocks_coal_glass.png"},
+                one_texture = true,
 		paramtype = "light",
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
@@ -161,8 +178,9 @@ local nodes = {
 	["clean_glass"] = {
 		description = S("Clean Glass"),
 		drawtype = "glasslike_framed_optional",
-		--tiles = {"moreblocks_clean_glass.png", "moreblocks_clean_glass_detail.png"},
+		tiles = {"moreblocks_clean_glass.png", "moreblocks_clean_glass_detail.png"},
 		tiles = {"moreblocks_clean_glass.png"},
+                one_texture = true,
 		paramtype = "light",
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
@@ -232,11 +250,22 @@ local nodes = {
 		sounds = sound_stone,
 		no_stairs = true,
 	},
+        ["trap_desert_stone"] = {
+                description = S("Trap Desert Stone"),
+                drawtype = "glasslike_framed",
+                tiles = {"default_desert_stone.png^moreblocks_trap_box.png"},
+                walkable = false,
+                groups = {cracky = 3},
+                paramtype = "light",
+                is_ground_content = false,
+                sounds = sound_stone,
+                no_stairs = true,
+        },
 	["trap_glass"] = {
 		description = S("Trap Glass"),
 		drawtype = "glasslike_framed_optional",
-		--tiles = {"moreblocks_trap_glass.png", "default_glass_detail.png"},
-		tiles = {"moreblocks_trap_glass.png"},
+		tiles = {"moreblocks_trap_glass.png", "default_glass_detail.png"},
+		--tiles = {"moreblocks_trap_glass.png"},
 		paramtype = "light",
 		sunlight_propagates = true,
 		walkable = false,
@@ -244,6 +273,40 @@ local nodes = {
 		sounds = sound_glass,
 		no_stairs = true,
 	},
+        ["trap_obsidian_glass"] = {
+                description = S("Trap Obsidian Glass"),
+                drawtype = "glasslike_framed_optional",
+                tiles = {"default_obsidian_glass.png^moreblocks_trap_box_glass.png", "default_obsidian_glass_detail.png"},
+                paramtype = "light",
+                sunlight_propagates = true,
+                is_ground_content = false,
+                walkable = false,
+                groups = {cracky = 3, oddly_breakable_by_hand = 3},
+                sounds = sound_glass,
+                no_stairs = true,
+        },
+        ["trap_obsidian"] = {
+                description = S("Trap Obsidian"),
+                drawtype = "glasslike_framed",
+                tiles = {"default_obsidian.png^moreblocks_trap_box.png"},
+                walkable = false,
+                groups = {cracky = 1, level = 2},
+                paramtype = "light",
+                is_ground_content = false,
+                sounds = sound_stone,
+                no_stairs = true,
+        },
+        ["trap_sandstone"] = {
+                description = S("Trap Sandstone"),
+                drawtype = "glasslike_framed",
+                tiles = {"default_sandstone.png^moreblocks_trap_box.png"},
+                walkable = false,
+                groups = {crumbly = 1, cracky = 3},
+                paramtype = "light",
+                is_ground_content = false,
+                sounds = sound_stone,
+                no_stairs = true,
+        },
 	["all_faces_tree"] = {
 		description = S("All-faces Tree"),
 		tiles = {"default_tree_top.png"},
@@ -258,11 +321,33 @@ local nodes = {
 		sounds = sound_wood,
 		furnace_burntime = 30,
 	},
+        ["all_faces_pine_tree"] = {
+                description = S("All-faces Pine Tree"),
+                tiles = {"default_pine_tree_top.png"},
+                groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+                sounds = sound_wood,
+                furnace_burntime = 26,
+        },
+        ["all_faces_acacia_tree"] = {
+                description = S("All-faces Acacia Tree"),
+                tiles = {"default_acacia_tree_top.png"},
+                groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
+                sounds = sound_wood,
+                furnace_burntime = 34,
+        },
+        ["all_faces_aspen_tree"] = {
+                description = S("All-faces Aspen Tree"),
+                tiles = {"default_aspen_tree_top.png"},
+                groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+                sounds = sound_wood,
+                furnace_burntime = 22,
+        },
 	["glow_glass"] = {
 		description = S("Glow Glass"),
 		drawtype = "glasslike_framed_optional",
-		--tiles = {"moreblocks_glow_glass.png", "moreblocks_glow_glass_detail.png"},
+		tiles = {"moreblocks_glow_glass.png", "moreblocks_glow_glass_detail.png"},
 		tiles = {"moreblocks_glow_glass.png"},
+                one_texture = true,
 		paramtype = "light",
 		sunlight_propagates = true,
 		light_source = 11,
@@ -272,8 +357,8 @@ local nodes = {
 	["trap_glow_glass"] = {
 		description = S("Trap Glow Glass"),
 		drawtype = "glasslike_framed_optional",
-		--tiles = {"moreblocks_trap_glass.png", "moreblocks_glow_glass_detail.png"},
-		tiles = {"moreblocks_trap_glass.png"},
+		tiles = {"moreblocks_trap_glass.png", "moreblocks_glow_glass_detail.png"},
+		--tiles = {"moreblocks_trap_glass.png"},
 		paramtype = "light",
 		sunlight_propagates = true,
 		light_source = 11,
@@ -285,9 +370,10 @@ local nodes = {
 	["super_glow_glass"] = {
 		description = S("Super Glow Glass"),
 		drawtype = "glasslike_framed_optional",
-		--tiles = {"moreblocks_super_glow_glass.png", "moreblocks_super_glow_glass_detail.png"},
+		tiles = {"moreblocks_super_glow_glass.png", "moreblocks_super_glow_glass_detail.png"},
 		--tiles = {"moreblocks_super_glow_glass.png"},
-		tiles = {"default_glass.png^[colorize:#FFFF78"},
+                one_texture = true,
+		-- tiles = {"default_glass.png^[colorize:#FFFF78"},
 		paramtype = "light",
 		sunlight_propagates = true,
 		light_source = 14,
@@ -297,8 +383,8 @@ local nodes = {
 	["trap_super_glow_glass"] = {
 		description = S("Trap Super Glow Glass"),
 		drawtype = "glasslike_framed_optional",
-		--tiles = {"moreblocks_trap_super_glow_glass.png", "moreblocks_super_glow_glass_detail.png"},
-		tiles = {"moreblocks_trap_super_glow_glass.png"},
+		tiles = {"moreblocks_trap_super_glow_glass.png", "moreblocks_super_glow_glass_detail.png"},
+		--tiles = {"moreblocks_trap_super_glow_glass.png"},
 		paramtype = "light",
 		sunlight_propagates = true,
 		light_source = 14,
@@ -328,6 +414,17 @@ local nodes = {
 		sounds = sound_metal,
 	},
 }
+
+if minetest.get_modpath("ethereal") then
+    nodes["all_faces_mushroom_tree"] =  {
+                description = S("All-faces Mushroom Tree"),
+                tiles = {"mushroom_trunk_top.png"},
+                groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+                sounds = sound_wood,
+                furnace_burntime = 22,
+             }
+end
+
 
 for name, def in pairs(nodes) do
 	def.tiles = def.tiles or {"moreblocks_" ..name.. ".png"}
