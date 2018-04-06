@@ -129,6 +129,13 @@ end
 -- wood tiles
 minetest.register_alias("moreblocks:wood_tile_offset", "moreblocks:wood_tile_up")
 
+-- desert stone stair
+-- created in dungeons
+
+minetest.register_alias("stairs:stair_desert_stone","moreblocks:stair_desert_stone")
+
+  
+
 
 -- new trapstones and other blocks
 --  all_faces_acaia_tree
@@ -138,4 +145,4 @@ minetest.register_alias("moreblocks:wood_tile_offset", "moreblocks:wood_tile_up"
 --  trap_obsidian
 --  trap_obsidian_glass
 --  trap_sandstone
--- TODO: in nodes.lua and crafting.lua
+--  in nodes.lua and crafting.lua

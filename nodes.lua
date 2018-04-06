@@ -179,7 +179,7 @@ local nodes = {
 		description = S("Clean Glass"),
 		drawtype = "glasslike_framed_optional",
 		tiles = {"moreblocks_clean_glass.png", "moreblocks_clean_glass_detail.png"},
-		tiles = {"moreblocks_clean_glass.png"},
+		-- tiles = {"moreblocks_clean_glass.png"},
                 one_texture = true,
 		paramtype = "light",
 		sunlight_propagates = true,
@@ -346,7 +346,7 @@ local nodes = {
 		description = S("Glow Glass"),
 		drawtype = "glasslike_framed_optional",
 		tiles = {"moreblocks_glow_glass.png", "moreblocks_glow_glass_detail.png"},
-		tiles = {"moreblocks_glow_glass.png"},
+		-- tiles = {"moreblocks_glow_glass.png"},
                 one_texture = true,
 		paramtype = "light",
 		sunlight_propagates = true,
@@ -358,7 +358,7 @@ local nodes = {
 		description = S("Trap Glow Glass"),
 		drawtype = "glasslike_framed_optional",
 		tiles = {"moreblocks_trap_glass.png", "moreblocks_glow_glass_detail.png"},
-		--tiles = {"moreblocks_trap_glass.png"},
+		-- tiles = {"moreblocks_trap_glass.png"},
 		paramtype = "light",
 		sunlight_propagates = true,
 		light_source = 11,
@@ -371,9 +371,9 @@ local nodes = {
 		description = S("Super Glow Glass"),
 		drawtype = "glasslike_framed_optional",
 		tiles = {"moreblocks_super_glow_glass.png", "moreblocks_super_glow_glass_detail.png"},
-		--tiles = {"moreblocks_super_glow_glass.png"},
-                one_texture = true,
+		-- tiles = {"moreblocks_super_glow_glass.png"},
 		-- tiles = {"default_glass.png^[colorize:#FFFF78"},
+                one_texture = true,
 		paramtype = "light",
 		sunlight_propagates = true,
 		light_source = 14,
@@ -384,7 +384,7 @@ local nodes = {
 		description = S("Trap Super Glow Glass"),
 		drawtype = "glasslike_framed_optional",
 		tiles = {"moreblocks_trap_super_glow_glass.png", "moreblocks_super_glow_glass_detail.png"},
-		--tiles = {"moreblocks_trap_super_glow_glass.png"},
+		-- tiles = {"moreblocks_trap_super_glow_glass.png"},
 		paramtype = "light",
 		sunlight_propagates = true,
 		light_source = 14,
@@ -432,11 +432,15 @@ for name, def in pairs(nodes) do
 	minetest.register_alias(name, "moreblocks:" ..name)
 	if not def.no_stairs then
 		local groups = {}
+                temp_tiles = def.tiles
+                if def.one_texture then
+                   temp_tiles = { def.tiles[1]}
+                end
 		for k, v in pairs(def.groups) do groups[k] = v end
 		stairsplus:register_all("moreblocks", name, "moreblocks:" ..name, {
 			description = def.description,
 			groups = groups,
-			tiles = def.tiles,
+			tiles = temp_tiles,
 			sunlight_propagates = def.sunlight_propagates,
 			light_source = def.light_source,
 			sounds = def.sounds,
@@ -456,3 +460,17 @@ minetest.register_craftitem("moreblocks:nothing", {
 	inventory_image = "invisible.png",
 	on_use = function() end,
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+

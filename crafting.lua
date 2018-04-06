@@ -202,11 +202,46 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "moreblocks:split_stone_tile 9",
+	recipe = {
+           {"moreblocks:stone_tile","moreblocks:stone_tile","moreblocks:stone_tile"},
+           {"moreblocks:stone_tile","moreblocks:stone_tile","moreblocks:stone_tile"},
+           {"moreblocks:stone_tile","moreblocks:stone_tile","moreblocks:stone_tile"},
+	}
+})
+
+minetest.register_craft({
 	output = "moreblocks:split_stone_tile_alt",
 	recipe = {
 		{"moreblocks:split_stone_tile"},
 	}
 })
+
+minetest.register_craft({
+	output = "moreblocks:split_stone_tile_alt 9",
+	recipe = {
+		{"moreblocks:split_stone_tile","moreblocks:split_stone_tile","moreblocks:split_stone_tile"},
+		{"moreblocks:split_stone_tile","moreblocks:split_stone_tile","moreblocks:split_stone_tile"},
+		{"moreblocks:split_stone_tile","moreblocks:split_stone_tile","moreblocks:split_stone_tile"},
+	}
+})
+
+minetest.register_craft({
+	output = "moreblocks:stone_tile",
+	recipe = {
+		{"moreblocks:split_stone_tile_alt"},
+	}
+})
+
+minetest.register_craft({
+	output = "moreblocks:stone_tile 9",
+	recipe = {
+		{"moreblocks:split_stone_tile_alt","moreblocks:split_stone_tile_alt","moreblocks:split_stone_tile_alt"},
+		{"moreblocks:split_stone_tile_alt","moreblocks:split_stone_tile_alt","moreblocks:split_stone_tile_alt"},
+		{"moreblocks:split_stone_tile_alt","moreblocks:split_stone_tile_alt","moreblocks:split_stone_tile_alt"},
+	}
+})
+
 
 minetest.register_craft({
 	output = "moreblocks:grey_bricks 2",
@@ -535,9 +570,18 @@ minetest.register_craft({
 minetest.register_craft({
 	type = "shapeless",
 	output = "moreblocks:copperpatina",
-	recipe = {"group:bucket_water", "default:copperblock"},
+	recipe = {"bucket:bucket_water", "default:copperblock"},
 	replacements = {
-		{"group:bucket_water", "bucket:bucket_empty"}
+		{"bucket:bucket_water", "bucket:bucket_empty"}
+	}
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "moreblocks:copperpatina",
+	recipe = {"bucket:bucket_river_water", "default:copperblock"},
+	replacements = {
+		{"bucket:bucket_river_water", "bucket:bucket_empty"}
 	}
 })
 
