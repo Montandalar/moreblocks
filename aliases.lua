@@ -77,3 +77,71 @@ minetest.register_abm({
 		})
 	end,
 })
+
+
+
+
+
+  
+local stairs_list =
+{
+"acacia_wood",
+"aspen_wood",
+"brick",
+"bronzeblock",
+"clay",
+"cobble",
+"copperblock",
+"desert_cobble",
+"desert_sandstone",
+"desert_sandstone_block",
+"desert_sandstone_brick",
+"desert_stone",
+"desert_stone_block",
+"desert_stonebrick",
+"feldweg",
+"goldblock",
+"ice",
+"junglewood",
+"loam",
+"obsidian",
+"obsidian_block",
+"obsidianbrick",
+"pine_wood",
+"sandstone",
+"sandstone_block",
+"sandstonebrick",
+"silver_sandstone",
+"silver_sandstone_block",
+"silver_sandstone_brick",
+"snowblock",
+"steelblock",
+"stone",
+"stone_block",
+"stonebrick",
+"straw",
+"wood",
+}
+
+for i = 1, #stairs_list do
+   local n = "default:"..stairs_list[i]
+   local n1 = "stairs:slab_"..stairs_list[i]
+   local n2 = "stairs:stair_"..stairs_list[i]
+
+   minetest.log("action", "[moreblocks] "..n.."   "..n1.."   "..n2)
+
+   minetest.register_craft({
+                              output = n,
+                              type = "shapeless",
+                              recipe = {n1,n1},
+                           })
+
+   minetest.register_craft({
+                              output = n.." 3",
+                              type = "shapeless",
+                              recipe = {n2,n2,n2,n2},
+                           })
+                              
+end
+
+
