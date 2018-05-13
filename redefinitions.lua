@@ -25,6 +25,14 @@ minetest.register_craft({
 	}
 })
 
+
+minetest.clear_craft({ 	recipe = { 
+		{"default:papyrus", "default:papyrus", "default:papyrus"},
+	{"","","",},
+	{"","","",}
+	}
+ }) 
+
 minetest.register_craft({
 	output = "default:paper 4",
 	recipe = {
@@ -132,9 +140,7 @@ minetest.register_alias("moreblocks:wood_tile_offset", "moreblocks:wood_tile_up"
 -- desert stone stair
 -- created in dungeons
 
-minetest.register_alias("stairs:stair_desert_stone","moreblocks:stair_desert_stone")
-
-  
+-- minetest.register_alias("stairs:stair_desert_stone","moreblocks:stair_desert_stone")
 
 
 -- new trapstones and other blocks
@@ -146,3 +152,5 @@ minetest.register_alias("stairs:stair_desert_stone","moreblocks:stair_desert_sto
 --  trap_obsidian_glass
 --  trap_sandstone
 --  in nodes.lua and crafting.lua
+
+

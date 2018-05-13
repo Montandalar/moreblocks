@@ -16,8 +16,10 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "default:wood",
-	recipe = {{"group:wood"},}
+	output = "default:wood 2",
+	recipe = { {"group:wood","",""},
+                   {"group:wood","",""},
+                   {"","",""}}
 })
 
 minetest.register_craft({
