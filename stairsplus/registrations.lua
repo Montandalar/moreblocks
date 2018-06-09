@@ -51,7 +51,9 @@ local default_nodes = { -- Default stairs/slabs/panels/microblocks:
 	"farming:straw"
 }
 
-
+if minetest.get_modpath("ehlphabet") then
+   table.insert(default_nodes,"ehlphabet:block")
+end
 
 
 for _, name in pairs(default_nodes) do
