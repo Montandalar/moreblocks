@@ -2,4 +2,3 @@ default
 intllib?
 farming?
 wool?
-ehlphabet?
