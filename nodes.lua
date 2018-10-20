@@ -186,6 +186,20 @@ local nodes = {
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
 	},
+	["blue_tinted_glass"] = {
+		description = S("Blue Tinted Glass"),
+		drawtype = "glasslike_framed_optional",
+                tiles = {"blue1.png^moreblocks_clean_glass.png"},
+		-- tiles = {"moreblocks_clean_glass.png","moreblocks_clean_glass_detail.png"},
+		-- tiles = {"moreblocks_clean_glass.png"},
+                one_texture = true,
+                use_texture_alpha = true,
+		paramtype = "light",
+                no_stairs = true;
+		sunlight_propagates = true,
+		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = sound_glass,
+	},
 	["cactus_brick"] = {
 		description = S("Cactus Brick"),
 		groups = {cracky = 3},

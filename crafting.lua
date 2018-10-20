@@ -604,3 +604,16 @@ if minetest.settings:get_bool("moreblocks.circular_saw_crafting") ~= false then 
 		}
 	})
 end
+
+
+minetest.register_craft({
+   type = "shapeless",
+        output = "moreblocks:blue_tinted_glass 8",
+        recipe = {"default:glass", "default:glass", "default:glass", 
+           "default:glass", "dye:blue", "default:glass", 
+           "default:glass", "default:glass", "default:glass"}
+})
+
+
+
+
