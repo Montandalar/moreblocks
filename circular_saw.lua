@@ -242,6 +242,9 @@ function circular_saw.allow_metadata_inventory_put(
 		local incost = (incount * 8) + microstack:get_count()
 		local maxcost = (stackmax * 8) + 7
 		local cost = circular_saw:get_cost(inv, stackname)
+		if not cost then 
+		   return 0 
+		end
 		if (incost + cost) > maxcost then
 			return math.max((maxcost - incost) / cost, 0)
 		end
