@@ -186,20 +186,6 @@ local nodes = {
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
 	},
-	["blue_tinted_glass"] = {
-		description = S("Blue Tinted Glass"),
-		drawtype = "glasslike_framed_optional",
-                tiles = {"blue1.png^moreblocks_clean_glass.png"},
-		-- tiles = {"moreblocks_clean_glass.png","moreblocks_clean_glass_detail.png"},
-		-- tiles = {"moreblocks_clean_glass.png"},
-                one_texture = true,
-                use_texture_alpha = true,
-		paramtype = "light",
-                no_stairs = true;
-		sunlight_propagates = true,
-		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
-		sounds = sound_glass,
-	},
 	["cactus_brick"] = {
 		description = S("Cactus Brick"),
 		groups = {cracky = 3},
@@ -427,6 +413,103 @@ local nodes = {
 		groups = {cracky = 1, level = 2},
 		sounds = sound_metal,
 	},
+	["blue_tinted_glass"] = {
+		description = S("Blue Tinted Glass"),
+		drawtype = "glasslike_framed_optional",
+                tiles = {"moreblocks_blue1.png^moreblocks_clean_glass.png"},
+                one_texture = true,
+                use_texture_alpha = true,
+		paramtype = "light",
+                no_stairs = true;
+		sunlight_propagates = true,
+		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = sound_glass,
+	},
+	["cyan_tinted_glass"] = {
+		description = S("Cyan Tinted Glass"),
+		drawtype = "glasslike_framed_optional",
+                tiles = {"moreblocks_cyan1.png^moreblocks_clean_glass.png"},
+                one_texture = true,
+                use_texture_alpha = true,
+		paramtype = "light",
+                no_stairs = true;
+		sunlight_propagates = true,
+		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = sound_glass,
+	},
+	["green_tinted_glass"] = {
+		description = S("Green Tinted Glass"),
+		drawtype = "glasslike_framed_optional",
+                tiles = {"moreblocks_green1.png^moreblocks_clean_glass.png"},
+                one_texture = true,
+                use_texture_alpha = true,
+		paramtype = "light",
+                no_stairs = true;
+		sunlight_propagates = true,
+		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = sound_glass,
+	},
+	["grey_tinted_glass"] = {
+		description = S("Grey Tinted Glass"),
+		drawtype = "glasslike_framed_optional",
+                tiles = {"moreblocks_grey1.png^moreblocks_clean_glass.png"},
+                one_texture = true,
+                use_texture_alpha = true,
+		paramtype = "light",
+                no_stairs = true;
+		sunlight_propagates = true,
+		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = sound_glass,
+	},
+	["red_tinted_glass"] = {
+		description = S("Red Tinted Glass"),
+		drawtype = "glasslike_framed_optional",
+                tiles = {"moreblocks_red1.png^moreblocks_clean_glass.png"},
+                one_texture = true,
+                use_texture_alpha = true,
+		paramtype = "light",
+                no_stairs = true;
+		sunlight_propagates = true,
+		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = sound_glass,
+	},
+	["magenta_tinted_glass"] = {
+		description = S("Magenta Tinted Glass"),
+		drawtype = "glasslike_framed_optional",
+                tiles = {"moreblocks_magenta1.png^moreblocks_clean_glass.png"},
+                one_texture = true,
+                use_texture_alpha = true,
+		paramtype = "light",
+                no_stairs = true;
+		sunlight_propagates = true,
+		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = sound_glass,
+	},
+	["white_tinted_glass"] = {
+		description = S("White Tinted Glass"),
+		drawtype = "glasslike_framed_optional",
+                tiles = {"moreblocks_white1.png^moreblocks_clean_glass.png"},
+                one_texture = true,
+                use_texture_alpha = true,
+		paramtype = "light",
+                no_stairs = true;
+		sunlight_propagates = true,
+		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = sound_glass,
+	},
+	["yellow_tinted_glass"] = {
+		description = S("Yellow Tinted Glass"),
+		drawtype = "glasslike_framed_optional",
+                tiles = {"moreblocks_yellow1.png^moreblocks_clean_glass.png"},
+                one_texture = true,
+                use_texture_alpha = true,
+		paramtype = "light",
+                no_stairs = true;
+		sunlight_propagates = true,
+		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+		sounds = sound_glass,
+	},
+
 }
 
 if minetest.get_modpath("ethereal") then
