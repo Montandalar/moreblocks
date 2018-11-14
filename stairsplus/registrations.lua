@@ -55,6 +55,9 @@ if minetest.get_modpath("ehlphabet") then
    table.insert(default_nodes,"ehlphabet:block")
 end
 
+if minetest.get_modpath("moreores") then
+   table.insert(default_nodes,"moreores:mithril_block")
+end
 
 for _, name in pairs(default_nodes) do
 	local nodename = "default:"..name
