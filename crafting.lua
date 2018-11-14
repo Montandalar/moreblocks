@@ -614,6 +614,60 @@ minetest.register_craft({
            "default:glass", "default:glass", "default:glass"}
 })
 
+minetest.register_craft({
+   type = "shapeless",
+        output = "moreblocks:cyan_tinted_glass 8",
+        recipe = {"default:glass", "default:glass", "default:glass", 
+           "default:glass", "dye:cyan", "default:glass", 
+           "default:glass", "default:glass", "default:glass"}
+})
 
+minetest.register_craft({
+   type = "shapeless",
+        output = "moreblocks:green_tinted_glass 8",
+        recipe = {"default:glass", "default:glass", "default:glass", 
+           "default:glass", "dye:green", "default:glass", 
+           "default:glass", "default:glass", "default:glass"}
+})
+
+minetest.register_craft({
+   type = "shapeless",
+        output = "moreblocks:grey_tinted_glass 8",
+        recipe = {"default:glass", "default:glass", "default:glass", 
+           "default:glass", "dye:grey", "default:glass", 
+           "default:glass", "default:glass", "default:glass"}
+})
+
+minetest.register_craft({
+   type = "shapeless",
+        output = "moreblocks:magenta_tinted_glass 8",
+        recipe = {"default:glass", "default:glass", "default:glass", 
+           "default:glass", "dye:magenta", "default:glass", 
+           "default:glass", "default:glass", "default:glass"}
+})
+
+minetest.register_craft({
+   type = "shapeless",
+        output = "moreblocks:red_tinted_glass 8",
+        recipe = {"default:glass", "default:glass", "default:glass", 
+           "default:glass", "dye:red", "default:glass", 
+           "default:glass", "default:glass", "default:glass"}
+})
+
+minetest.register_craft({
+   type = "shapeless",
+        output = "moreblocks:white_tinted_glass 8",
+        recipe = {"default:glass", "default:glass", "default:glass", 
+           "default:glass", "dye:white", "default:glass", 
+           "default:glass", "default:glass", "default:glass"}
+})
+
+minetest.register_craft({
+   type = "shapeless",
+        output = "moreblocks:yellow_tinted_glass 8",
+        recipe = {"default:glass", "default:glass", "default:glass", 
+           "default:glass", "dye:yellow", "default:glass", 
+           "default:glass", "default:glass", "default:glass"}
+})
 
 
