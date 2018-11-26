@@ -73,7 +73,7 @@ function stairsplus:register_6dfacedir_conversion(modname, material)
 
 		--print("    +---> convert " ..object)
 		--print("    |     to " ..dest_object)
-
+		if false then  -- ABM disabled 
 		minetest.register_abm({
 			nodenames = {object},
 			interval = 1,
@@ -92,6 +92,7 @@ function stairsplus:register_6dfacedir_conversion(modname, material)
 				minetest.set_node(pos, {name = dest_object, param2 = nfdir})
 			end
 		})
+	     end 
 	end
 
 	for _, object in pairs(objects_list2) do
@@ -117,7 +118,7 @@ function stairsplus:register_6dfacedir_conversion(modname, material)
 
 		--print("    +---> convert " ..object)
 		--print("    |     to " ..dest_object)
-
+		if false then -- ABM disabled
 		minetest.register_abm({
 			nodenames = {object},
 			interval = 1,
@@ -135,5 +136,6 @@ function stairsplus:register_6dfacedir_conversion(modname, material)
 				minetest.set_node(pos, {name = dest_object, param2 = nfdir})
 			end
 		})
+	     end
 	end
 end

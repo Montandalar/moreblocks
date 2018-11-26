@@ -60,6 +60,7 @@ minetest.register_alias("moreblocks:allfacestree","moreblocks:all_faces_tree")
 -- ABM for horizontal trees (fix facedir):
 local horizontal_tree_convert_facedir = {7, 12, 9, 18}
 
+if false then  -- ABM disabled
 minetest.register_abm({
 	nodenames = {"moreblocks:horizontal_tree","moreblocks:horizontal_jungle_tree"},
 	interval = 1,
@@ -77,7 +78,7 @@ minetest.register_abm({
 		})
 	end,
 })
-
+end
 
 
 
