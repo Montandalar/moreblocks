@@ -646,6 +646,7 @@ minetest.register_craft({
            "default:glass", "default:glass", "default:glass"}
 })
 
+
 minetest.register_craft({
    type = "shapeless",
         output = "moreblocks:red_tinted_glass 8",
@@ -669,5 +670,69 @@ minetest.register_craft({
            "default:glass", "dye:yellow", "default:glass", 
            "default:glass", "default:glass", "default:glass"}
 })
+
+
+minetest.register_craft({
+                           output = "moreblocks:gravel_stonebrick 2",
+                           recipe = {
+                              { "default:gravel" },
+                              { "default:stonebrick"},
+                           }
+                        })
+
+minetest.register_craft({
+                           output = "moreblocks:gravel_slope 6",
+                           recipe = {
+                              { "","","" },
+                              { "","","default:gravel", },
+                              { "", "default:gravel", "default:gravel" },
+                           }
+                        })
+
+
+minetest.register_craft({
+                           output = "moreblocks:gravel_slope2_a 12",
+                           recipe = {
+                              { "","","" },
+                              { "","","", },
+                              { "", "default:gravel", "default:gravel" },
+                           }
+                        })
+
+minetest.register_craft({
+                           output = "moreblocks:gravel_slope2_b 4",
+                           recipe = {
+                              { "","","default:gravel", },
+                              { "","","" },
+                              { "", "default:gravel", "default:gravel" },
+                           }
+                        })
+
+minetest.register_craft({
+                           output = "moreblocks:gravel_slope3_a 18",
+                           recipe = {
+                              { "","","" },
+                              { "","","", },
+                              { "default:gravel", "default:gravel", "default:gravel" },
+                           }
+                        })
+
+minetest.register_craft({
+                           output = "moreblocks:gravel_slope3_b 8",
+                           recipe = {
+                              { "","","" },
+                              { "","","default:gravel", },
+                              { "default:gravel", "default:gravel", "default:gravel" },
+                           }
+                        })
+
+minetest.register_craft({
+                           output = "moreblocks:gravel_slope3_c 8",
+                           recipe = {
+                              { "","","default:gravel", },
+                              { "","default:gravel","" },
+                              { "default:gravel", "default:gravel", "default:gravel" },
+                           }
+                        })
 
 

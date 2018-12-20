@@ -12,6 +12,7 @@ local sound_wood = default.node_sound_wood_defaults()
 local sound_stone = default.node_sound_stone_defaults()
 local sound_glass = default.node_sound_glass_defaults()
 local sound_leaves = default.node_sound_leaves_defaults()
+local sound_gravel = default.node_sound_gravel_defaults()
 
 -- Don't break on 0.4.14 and earlier.
 local sound_metal = (default.node_sound_metal_defaults
@@ -21,6 +22,17 @@ local function tile_tiles(name)
 	local tex = "moreblocks_" ..name.. ".png"
 	return {tex, tex, tex, tex, tex.. "^[transformR90", tex.. "^[transformR90"}
 end
+
+local box_slope = {
+	type = "fixed",
+	fixed = {
+		{-0.5,  -0.5,  -0.5, 0.5, -0.25, 0.5},
+		{-0.5, -0.25, -0.25, 0.5,     0, 0.5},
+		{-0.5,     0,     0, 0.5,  0.25, 0.5},
+		{-0.5,  0.25,  0.25, 0.5,   0.5, 0.5}
+	}
+}
+
 
 local nodes = {
 	["wood_tile"] = {
@@ -508,6 +520,33 @@ local nodes = {
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
+	},
+	["gravel_stonebrick"] = {
+           description = S("Gravel on Stonebrick"),
+           tiles = {"default_gravel.png",
+              "default_stone_brick.png",
+              "default_gravel.png^[lowpart:50:default_stone_brick.png",
+              "default_gravel.png^[lowpart:50:default_stone_brick.png",
+              "default_gravel.png^[lowpart:50:default_stone_brick.png",
+              "default_gravel.png^[lowpart:50:default_stone_brick.png"},
+           no_stairs = true;
+           groups = {cracky = 3},
+           sounds = sound_gravel,
+	},
+	["gravel_slope"] = {
+           description = S("Gravel Slope"),
+           tiles = { "default_gravel.png" } ,
+           no_stairs = true,
+           groups = {crumbly = 2, falling_node = 1},
+           sounds = sound_gravel,
+           drawtype = "mesh", 
+           mesh = "moreblocks_slope.obj",
+           collision_box = box_slope,
+           selection_box = box_slope,
+           paramtype2 = "facedir",      -- neu
+           on_rotate = screwdriver.rotate_simple ,   -- neu
+           is_ground_content = false,   --neu
+           buildable_to = true;
 	},
 
 }
