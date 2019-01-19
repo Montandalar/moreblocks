@@ -691,7 +691,7 @@ minetest.register_craft({
 
 
 minetest.register_craft({
-                           output = "moreblocks:gravel_slope2_a 12",
+                           output = "moreblocks:gravel_slope_2a 12",
                            recipe = {
                               { "","","" },
                               { "","","", },
@@ -700,7 +700,7 @@ minetest.register_craft({
                         })
 
 minetest.register_craft({
-                           output = "moreblocks:gravel_slope2_b 4",
+                           output = "moreblocks:gravel_slope_2b 4",
                            recipe = {
                               { "","","default:gravel", },
                               { "","","" },
@@ -709,7 +709,7 @@ minetest.register_craft({
                         })
 
 minetest.register_craft({
-                           output = "moreblocks:gravel_slope3_a 18",
+                           output = "moreblocks:gravel_slope_3a 18",
                            recipe = {
                               { "","","" },
                               { "","","", },
@@ -718,7 +718,7 @@ minetest.register_craft({
                         })
 
 minetest.register_craft({
-                           output = "moreblocks:gravel_slope3_b 8",
+                           output = "moreblocks:gravel_slope_3b 8",
                            recipe = {
                               { "","","" },
                               { "","","default:gravel", },
@@ -727,12 +727,13 @@ minetest.register_craft({
                         })
 
 minetest.register_craft({
-                           output = "moreblocks:gravel_slope3_c 8",
+                           output = "moreblocks:gravel_slope_3c 8",
                            recipe = {
                               { "","","default:gravel", },
                               { "","default:gravel","" },
                               { "default:gravel", "default:gravel", "default:gravel" },
                            }
                         })
+
 
 

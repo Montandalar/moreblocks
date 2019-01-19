@@ -120,6 +120,7 @@ function register_slope(modname, subname, recipeitem, groups, images, descriptio
 		drop = drop,
 		light_source = light,
 		sounds = default.node_sound_stone_defaults(),
+                use_texture_alpha = use_texture_alpha
 	})
 end
 
@@ -249,6 +250,7 @@ function stairsplus:register_slope(modname, subname, recipeitem, fields)
 		def.paramtype2 = def.paramtype2 or "facedir"
 		def.on_place = minetest.rotate_node
 		def.description = desc
+                def.use_texture_alpha = fields.use_texture_alpha
 		def.groups = stairsplus:prepare_groups(fields.groups)
 		if fields.drop and not (type(fields.drop) == "table") then
 			def.drop = modname.. ":slope_" ..fields.drop..alternate

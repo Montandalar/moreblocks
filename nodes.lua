@@ -2,6 +2,7 @@
 More Blocks: node definitions
 
 Copyright (c) 2011-2017 Hugo Locurcio and contributors.
+              2018,2019 Och_Noe 
 Licensed under the zlib license. See LICENSE.md for more information.
 --]]
 
@@ -30,6 +31,57 @@ local box_slope = {
 		{-0.5, -0.25, -0.25, 0.5,     0, 0.5},
 		{-0.5,     0,     0, 0.5,  0.25, 0.5},
 		{-0.5,  0.25,  0.25, 0.5,   0.5, 0.5}
+	}
+}
+
+local box_slope_half = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5,   -0.5,  0.5, -0.375, 0.5},
+		{-0.5, -0.375, -0.25, 0.5, -0.25,  0.5},
+		{-0.5, -0.25,  0,    0.5, -0.125, 0.5},
+		{-0.5, -0.125, 0.25, 0.5,  0,     0.5},
+	}
+}
+
+local box_slope_half_raised = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5,   -0.5,  0.5, 0.125, 0.5},
+		{-0.5, 0.125, -0.25, 0.5, 0.25,  0.5},
+		{-0.5, 0.25,  0,    0.5, 0.375, 0.5},
+		{-0.5, 0.375, 0.25, 0.5,  0.5,     0.5},
+	}
+}
+
+
+local box_slope_third = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5,   -0.5,  0.5, -0.417 , 0.5},
+		{-0.5, -0.417, -0.25, 0.5, -0.333 , 0.5},
+		{-0.5, -0.333,  0,    0.5, -0.250 , 0.5},
+		{-0.5, -0.250,  0.25, 0.5, -0.167, 0.5},
+	}
+}
+
+local box_slope_third_raised = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5,   -0.5,  0.5, -0.083 , 0.5},
+		{-0.5, -0.083, -0.25, 0.5,  0     , 0.5},
+		{-0.5,  0    ,  0,    0.5,  0.083 , 0.5},
+		{-0.5,  0.083,  0.25, 0.5,  0.167, 0.5},
+	}
+}
+
+local box_slope_third_top = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5,   -0.5,  0.5, 0.250, 0.5},
+		{-0.5,  0.250, -0.25, 0.5, 0.333, 0.5},
+		{-0.5,  0.333,  0,    0.5, 0.417, 0.5},
+		{-0.5,  0.417,  0.25, 0.5, 0.5  , 0.5},
 	}
 }
 
@@ -432,7 +484,7 @@ local nodes = {
                 one_texture = true,
                 use_texture_alpha = true,
 		paramtype = "light",
-                no_stairs = true;
+                -- no_stairs = true;
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
@@ -537,17 +589,118 @@ local nodes = {
            description = S("Gravel Slope"),
            tiles = { "default_gravel.png" } ,
            no_stairs = true,
-           groups = {crumbly = 2, falling_node = 1},
+           groups = {crumbly = 2, falling_node = 1, not_blocking_trains = 1},
            sounds = sound_gravel,
            drawtype = "mesh", 
            mesh = "moreblocks_slope.obj",
            collision_box = box_slope,
            selection_box = box_slope,
+           sunlight_propagates = false,
+           light_source = 0,
+           paramtype = "light",
            paramtype2 = "facedir",      -- neu
            on_rotate = screwdriver.rotate_simple ,   -- neu
            is_ground_content = false,   --neu
-           buildable_to = true;
+           -- buildable_to = true;
 	},
+
+	["gravel_slope_2a"] = {
+           description = S("Gravel Slope 2a"),
+           tiles = { "default_gravel.png" } ,
+           no_stairs = true,
+           groups = {crumbly = 2, falling_node = 1, not_blocking_trains = 1},
+           sounds = sound_gravel,
+           drawtype = "mesh", 
+           mesh = "moreblocks_slope_half.obj",
+           collision_box = box_slope_half,
+           selection_box = box_slope_half,
+           sunlight_propagates = false,
+           light_source = 0,
+           paramtype = "light",
+           paramtype2 = "facedir",      -- neu
+           on_rotate = screwdriver.rotate_simple ,   -- neu
+           is_ground_content = false,   --neu
+           -- buildable_to = true;
+	},
+
+	["gravel_slope_2b"] = {
+           description = S("Gravel Slope 2b"),
+           tiles = { "default_gravel.png" } ,
+           no_stairs = true,
+           groups = {crumbly = 2, falling_node = 1, not_blocking_trains = 1},
+           sounds = sound_gravel,
+           drawtype = "mesh", 
+           mesh = "moreblocks_slope_half_raised.obj",
+           collision_box = box_slope_half_raised,
+           selection_box = box_slope_half_raised,
+           sunlight_propagates = false,
+           light_source = 0,
+           paramtype = "light",
+           paramtype2 = "facedir",      -- neu
+           on_rotate = screwdriver.rotate_simple ,   -- neu
+           is_ground_content = false,   --neu
+           -- buildable_to = true;
+	},
+
+
+	["gravel_slope_3a"] = {
+           description = S("Gravel Slope 3a"),
+           tiles = { "default_gravel.png" } ,
+           no_stairs = true,
+           groups = {crumbly = 2, falling_node = 1, not_blocking_trains = 1},
+           sounds = sound_gravel,
+           drawtype = "mesh", 
+           mesh = "moreblocks_slope_third.obj",
+           collision_box = box_slope_third,
+           selection_box = box_slope_third,
+           sunlight_propagates = false,
+           light_source = 0,
+           paramtype = "light",
+           paramtype2 = "facedir",      -- neu
+           on_rotate = screwdriver.rotate_simple ,   -- neu
+           is_ground_content = false,   --neu
+           -- buildable_to = true;
+	},
+
+	["gravel_slope_3b"] = {
+           description = S("Gravel Slope 3b"),
+           tiles = { "default_gravel.png" } ,
+           no_stairs = true,
+           groups = {crumbly = 2, falling_node = 1, not_blocking_trains = 1},
+           sounds = sound_gravel,
+           drawtype = "mesh", 
+           mesh = "moreblocks_slope_third_raised.obj",
+           collision_box = box_slope_third_raised,
+           selection_box = box_slope_third_raised,
+           sunlight_propagates = false,
+           light_source = 0,
+           paramtype = "light",
+           paramtype2 = "facedir",      -- neu
+           on_rotate = screwdriver.rotate_simple ,   -- neu
+           is_ground_content = false,   --neu
+           -- buildable_to = true;
+	},
+
+	["gravel_slope_3c"] = {
+           description = S("Gravel Slope 3c"),
+           tiles = { "default_gravel.png" } ,
+           no_stairs = true,
+           groups = {crumbly = 2, falling_node = 1, not_blocking_trains = 1},
+           sounds = sound_gravel,
+           drawtype = "mesh", 
+           mesh = "moreblocks_slope_third_top.obj",
+           collision_box = box_slope_third_top,
+           selection_box = box_slope_third_top,
+           sunlight_propagates = false,
+           light_source = 0,
+           paramtype = "light",
+           paramtype2 = "facedir",      -- neu
+           on_rotate = screwdriver.rotate_simple ,   -- neu
+           is_ground_content = false,   --neu
+           -- buildable_to = true;
+	},
+
+
 
 }
 
@@ -580,6 +733,7 @@ for name, def in pairs(nodes) do
 			sunlight_propagates = def.sunlight_propagates,
 			light_source = def.light_source,
 			sounds = def.sounds,
+                        use_texture_alpha = def.use_texture_alpha
 		})
 	end
 end

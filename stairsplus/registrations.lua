@@ -85,7 +85,9 @@ for _, name in pairs(default_nodes) do
 			sounds = ndef.sounds,
 			tiles = tiles,
 			sunlight_propagates = true,
-			light_source = ndef.light_source
+			light_source = ndef.light_source,
+                        use_texture_alpha = ndef.use_texture_alpha
+                                           
 		})
 	end
 end
@@ -126,3 +128,8 @@ if minetest.get_modpath("wool") then
 		})
 	end
 end
+
+
+
+
+
