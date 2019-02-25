@@ -496,7 +496,7 @@ local nodes = {
                 one_texture = true,
                 use_texture_alpha = true,
 		paramtype = "light",
-                no_stairs = true;
+                -- no_stairs = true;
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
@@ -508,7 +508,7 @@ local nodes = {
                 one_texture = true,
                 use_texture_alpha = true,
 		paramtype = "light",
-                no_stairs = true;
+                n-- o_stairs = true;
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
@@ -520,7 +520,7 @@ local nodes = {
                 one_texture = true,
                 use_texture_alpha = true,
 		paramtype = "light",
-                no_stairs = true;
+                -- no_stairs = true;
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
@@ -532,7 +532,7 @@ local nodes = {
                 one_texture = true,
                 use_texture_alpha = true,
 		paramtype = "light",
-                no_stairs = true;
+                -- no_stairs = true;
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
@@ -544,7 +544,7 @@ local nodes = {
                 one_texture = true,
                 use_texture_alpha = true,
 		paramtype = "light",
-                no_stairs = true;
+                -- no_stairs = true;
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
@@ -556,7 +556,7 @@ local nodes = {
                 one_texture = true,
                 use_texture_alpha = true,
 		paramtype = "light",
-                no_stairs = true;
+                -- no_stairs = true;
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
@@ -568,7 +568,7 @@ local nodes = {
                 one_texture = true,
                 use_texture_alpha = true,
 		paramtype = "light",
-                no_stairs = true;
+                -- no_stairs = true;
 		sunlight_propagates = true,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
