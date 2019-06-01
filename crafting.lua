@@ -569,6 +569,24 @@ minetest.register_craft({
 	type = "cooking", output = "moreblocks:tar", recipe = "default:gravel",
 })
 
+-- 2019-06-01
+-- minetest.register_craft({
+-- 	type = "cooking",
+--         cooktime = 45,   -- 5*9
+-- 	output = "default:stone 81",
+-- 	recipe = "moreblocks:cobble_condensed"
+			})
+
+-- minetest.register_craft({
+--	type = "grinding",
+--        time = 27,   -- 3*9
+--	output = "default:cobble 81",
+--	recipe = "moreblocks:cobble_condensed"
+--			})
+
+
+
+
 minetest.register_craft({
 	type = "shapeless",
 	output = "moreblocks:copperpatina",

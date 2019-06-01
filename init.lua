@@ -10,6 +10,9 @@ Licensed under the zlib license. See LICENSE.md for more information.
 
 moreblocks = {}
 
+-- 2019-06-01
+moreblocks.mod = "undo"
+
 local S
 if minetest.global_exists("intllib") then
 	if intllib.make_gettext_pair then
