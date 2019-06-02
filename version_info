@@ -29,7 +29,7 @@ if [ $WIDTH -lt $HEIGHT ] ; then
 fi
 
 
-pnmtopng .image2 >textures/moreblock_version_node.png
+pnmtopng .image2 >textures/moreblocks_version_node.png
 
 
 
