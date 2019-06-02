@@ -413,6 +413,19 @@ minetest.register_craft({
 	recipe = {"default:torch", "moreblocks:glow_glass"},
 })
 
+minetest.register_craft({
+	output = "moreblocks:dim_glow_glass",
+	type = "shapeless",
+	recipe = {"default:glass", "default:glass", "default:glass",
+	          "default:torch", "dye:white"},
+})
+
+minetest.register_craft({
+	output = "moreblocks:low_glow_glass",
+	type = "shapeless",
+	recipe = {"default:glass", "default:glass", "default:torch"},
+})
+
 
 minetest.register_craft({
 	output = "moreblocks:trap_super_glow_glass",
@@ -575,7 +588,7 @@ minetest.register_craft({
 --         cooktime = 45,   -- 5*9
 -- 	output = "default:stone 81",
 -- 	recipe = "moreblocks:cobble_condensed"
-			})
+--			})
 
 -- minetest.register_craft({
 --	type = "grinding",
