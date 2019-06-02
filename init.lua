@@ -36,6 +36,29 @@ dofile(modpath .. "/crafting.lua")
 dofile(modpath .. "/aliases.lua")
 dofile(modpath .. "/panes.lua")
 
+
+local own_name = "moreblocks"
+
+minetest.register_node(own_name..":version_node", {
+        description = own_name.." version node",
+        tiles = {own_name.."_version_node.png"},
+        groups = {cracky = 3,not_in_creative_inventory=1},
+     })
+
+minetest.register_craft({
+                           output = own_name..":version_node",
+                           recipe = {
+                              { "moreblocks:super_glow_glass" },
+                              { "moreblocks:cobble_condensed" },
+                              { "moreblocks:circular_saw" },
+                           },
+                        })
+
+
+
+
+
 if minetest.settings:get_bool("log_mods") then
 	minetest.log("action", S("[moreblocks] loaded."))
 end
+
