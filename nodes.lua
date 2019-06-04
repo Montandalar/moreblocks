@@ -458,7 +458,7 @@ local nodes = {
 		sounds = sound_glass,
 	},
 	["low_glow_glass"] = {
-		description = S("Dim Glow Glass"),
+		description = S("Low Glow Glass"),
 		drawtype = "glasslike_framed_optional",
 		tiles = {"moreblocks_low_glow_glass.png"},
 		-- tiles = {"default_glass.png^[colorize:#FFFF78"},
