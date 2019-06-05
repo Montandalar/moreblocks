@@ -453,7 +453,7 @@ local nodes = {
 		use_texture_alpha = true,
 		paramtype = "light",
 		sunlight_propagates = true,
-		light_source = 4,
+		light_source = 5,
 		groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 		sounds = sound_glass,
 	},
