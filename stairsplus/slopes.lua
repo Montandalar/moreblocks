@@ -110,6 +110,33 @@ local box_slope_outer_half_raised = {
 	}
 }
 
+local box_slope_inner_steep_lower = {
+	type = "fixed",
+	fixed = {
+		{-0.5000, -0.5000, -0.5000, 0.5000, -0.2500, 0.5000},
+		{-0.5000, -0.2500, -0.2500, 0.5000, 0.000, 0.5000},
+		{-0.5000, -0.2500, -0.5000, 0.2500, 0.000, 0.5000},
+		{-0.5000, 0.000, -0.5000, 0.1250, 0.2500, 0.5000},
+		{-0.5000, 0.000, -0.1250, 0.5000, 0.2500, 0.5000},
+		{-0.5000, 0.2500, -0.5000, 0.000, 0.5000, 0.5000},
+		{-0.5000, 0.2500, 0.000, 0.5000, 0.5000, 0.5000}
+	}
+}
+
+local box_slope_inner_steep_upper = {
+	type = "fixed",
+	fixed = {
+		{-0.5000, -0.5000, -0.5000, 0.000, -0.2500, 0.5000},
+		{-0.5000, -0.2500, 0.1250, 0.5000, 0.000, 0.5000},
+		{-0.5000, -0.2500, -0.5000, -0.1250, 0.000, 0.5000},
+		{-0.5000, 0.000, -0.5000, -0.2500, 0.2500, 0.5000},
+		{-0.5000, 0.000, 0.2500, 0.5000, 0.2500, 0.5000},
+		{-0.5000, 0.2500, -0.5000, -0.3750, 0.5000, 0.5000},
+		{-0.5000, 0.2500, 0.3750, 0.5000, 0.5000, 0.5000},
+		{-0.5000, -0.5000, 0.000, 0.5000, -0.2500, 0.5000}
+	}
+}
+
 -- Node will be called <modname>:slope_<subname>
 
 function register_slope(modname, subname, recipeitem, groups, images, description, drop, light)
@@ -217,6 +244,18 @@ local slopes_defs = {
 		mesh = "moreblocks_slope_cut.obj",
 		collision_box = box_slope_outer,
 		selection_box = box_slope_outer,
+	},
+	
+	--==============================================================
+	["_inner_steep_upper"] = {
+		mesh = "moreblocks_slope_inner_steep_upper.obj",
+		collision_box = box_slope_inner_steep_upper,
+		selection_box = box_slope_inner_steep_upper
+	},
+	["_inner_steep_lower"] = {
+		mesh = "moreblocks_slope_inner_steep_lower.obj",
+		collision_box = box_slope_inner_steep_lower,
+		selection_box = box_slope_inner_steep_lower
 	},
 }
 
